@@ -1,0 +1,230 @@
+
+body {
+	background: url('../images/mochaGrunge.png')repeat;
+  	font-family: 'Arima Madurai', sans-serif;
+  	min-height: 1000px;
+}
+#columns {
+	column-width: 250px;
+	-moz-column-width: 250px;
+	column-gap: 15px;
+	width: 100%;
+	max-width: 1100px;
+	margin: 50px auto;
+	box-sizing:border-box;
+}
+
+figure .card .front{
+	display: inline-block;
+}
+figure .card .back{
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	display: inline-block;
+	position: absolute;
+}
+.front, .back{
+    
+    /*background: #FEC606;*/
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+   /* box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);*/
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    position: relative;
+    background: #fafafa;
+}
+div#columns figure .card{ 
+	position: relative; 
+	transition: all 0.5s ease-in;
+	transform-style: preserve-3d; 
+	display: inline-block;
+}
+
+div#columns figure .card.flipped{
+	transform: rotateY(180deg);
+}
+
+div#columns figure .back img{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	padding: 20px 0;
+	margin-left: 80px;
+	position: relative;
+}
+div#columns figure {
+	background: transparent;
+	/*border: 2px solid #fcfcfc;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);*/
+	/*padding: 5px;*/
+	padding-bottom: 5px;
+	transition: opacity .4s ease-in-out;
+  	display: inline-block;
+  	column-break-inside: avoid;
+  	-moz-column-width: 320px;
+  	min-height: 300px;
+  	margin: 0 10px 25px 5px;
+  	box-sizing:border-box;
+ /* 	border: 2px solid #fcfcfc;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);*/
+    position: relative;
+}
+
+div#columns figure img {
+	width: 100%; 
+	height: auto;
+}
+
+div#columns figure figcaption {
+  font-size: .9rem;
+	color: #444;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+div#columns small { 
+  font-size: 1rem;
+  float: right; 
+  text-transform: uppercase;
+  color: #aaa;
+} 
+div#columns h2{
+	padding: 0;
+	margin: 0;
+}
+div#columns small a { 
+  color: #FAFAFA; 
+  text-decoration: none; 
+  transition: .4s color;
+}
+div#columns small a:hover{
+  text-decoration: underline;
+}
+div#columns figure figcaption .btn-action{
+	 position: absolute;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 3px solid #f0f1ee;
+    background: #999;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    right:10px;
+    bottom: 10px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #333;
+}
+.btn-action i.animated {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+
+}
+
+a.btn-action:hover, .btn-action:hover i.animated {
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+
+@-webkit-keyframes pulse {    
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {    
+    0% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+/*div#columns figure:hover figure:not(:hover) {
+    
+}
+*/
+h3, h6, .back li{
+	color: #888;
+  text-align: center;
+	font-weight: 200;
+	margin:0;
+}
+h3{
+	color: #222;
+  margin-bottom: 5px;
+}
+h1{ 
+  text-align: center;
+  color: #fafafa;
+ }
+.back .card-social{
+	padding: 15px;
+	font-size: 20px;
+	position: relative;
+}
+.back .card-social a{
+	padding-right: 15px;
+	display: block;
+	float: left;
+  margin-bottom: 10px;
+}
+
+.back li{ font-size: 13px; text-align: left;}
+ul{
+  padding: 0;
+  margin: 0;
+}
+li{
+  margin: 0;
+  padding: 0 8px 8px 8px; 
+}
+h1{
+  text-shadow: 1px 2px 1px #888;
+}
+@media screen and (max-width: 750px) { 
+  #columns { column-gap: 0px; }
+  #columns figure { width: 100%; }
+}
+@media screen and (max-width:  360px){
+   #columns figure { margin: 0 5px 5px 5px; }
+}
